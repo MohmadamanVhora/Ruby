@@ -10,7 +10,7 @@ class Car
     puts "Car Id: #{@id}"
   end
   
-  def polymorphismExample
+  def polymorphism_example
     puts "This car inside class Car"
   end
 
@@ -55,7 +55,7 @@ class Type < Car
     protected_method
   end
 
-  def polymorphismExample
+  def polymorphism_example
     puts "This car inside class Type"
   end
 end
@@ -66,31 +66,31 @@ class Name < Type
     puts "This is Ferrari Car"
   end
 
-  def polymorphismExample
+  def polymorphism_example
     puts "This car inside class Name"
   end
 end
 
 
-class Type2
+class CarType
   include Tyre         
   def luxurios
     puts "This is Luxurios car"
   end
 
-  def polymorphismExample
-    puts "This car inside class Type2"
+  def polymorphism_example
+    puts "This car inside class CarType"
   end
 end
 
 
-class Name2
+class CarName
   def name
     puts "This is Ferrari Car"
   end
 
-  def polymorphismExample
-    puts "This car inside class Name2"
+  def polymorphism_example
+    puts "This car inside class CarName"
   end
 end
 
@@ -124,14 +124,14 @@ inheritance_object2.name
 # Polymorphism
 
 # using inheritance
-polymorphism_object1 = Car.allocate.polymorphismExample
-polymorphism_object1 = Type.allocate.polymorphismExample
-polymorphism_object1 = Name.allocate.polymorphismExample
+polymorphism_object1 = Car.allocate.polymorphism_example
+polymorphism_object1 = Type.allocate.polymorphism_example
+polymorphism_object1 = Name.allocate.polymorphism_example
 
 # using duck typing
-polymorphism_object2 = Car.allocate.polymorphismExample
-polymorphism_object2 = Type2.allocate.polymorphismExample
-polymorphism_object2 = Name2.allocate.polymorphismExample
+polymorphism_object2 = Car.allocate.polymorphism_example
+polymorphism_object2 = CarType.allocate.polymorphism_example
+polymorphism_object2 = CarName.allocate.polymorphism_example
 
 
 # Abstraction
